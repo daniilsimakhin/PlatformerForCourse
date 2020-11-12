@@ -33,11 +33,14 @@ public class CharacterController : MonoBehaviour
         {
             _animator.SetFloat("Speed", 0);
         }
-        RaycastHit2D hit;
-        Debug.DrawRay(transform.position, Vector2.down, Color.red);
-        ////Physics2D.Raycast()
+        Debug.DrawRay(new Vector2(transform.position.x, transform.position.y - 0.9f), Vector2.down, Color.red);
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 0.9f), Vector2.down);//как лучше
+            if (hit.collider.name == "Tilemap")
+            {
+
+            }
             _rigibody.AddForce(Vector2.up * _jumpSpeed);
         }
     }
