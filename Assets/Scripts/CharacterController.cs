@@ -35,7 +35,7 @@ public class CharacterController : MonoBehaviour
         }
         RaycastHit2D hit;
         Debug.DrawRay(transform.position, Vector2.down, Color.red);
-        //Physics2D.Raycast()
+        ////Physics2D.Raycast()
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             _rigibody.AddForce(Vector2.up * _jumpSpeed);
