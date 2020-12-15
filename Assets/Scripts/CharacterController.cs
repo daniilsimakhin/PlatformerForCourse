@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    [SerializeField] private float _horizontalSpeed;
-    [SerializeField] private float _jumpSpeed;
+    [SerializeField] float _horizontalSpeed;
+    [SerializeField] float _jumpSpeed;
+    [SerializeField] ContactFilter2D _filter;
     private Animator _animator;
     private Rigidbody2D _rigibody;
 
@@ -33,15 +34,16 @@ public class CharacterController : MonoBehaviour
         {
             _animator.SetFloat("Speed", 0);
         }
-        Debug.DrawRay(new Vector2(transform.position.x, transform.position.y - 0.9f), Vector2.down, Color.red);
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 0.9f), Vector2.down);//как лучше
-            if (hit.collider.name == "Tilemap")
+            RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 1f), transform.up);
+            if (hit.collider != null)
             {
-
+                if (hit.collider.name == "Tilemap")
+                {
+                    _rigibody.AddForce(Vector2.up * _jumpSpeed);
+                }
             }
-            _rigibody.AddForce(Vector2.up * _jumpSpeed);
         }
     }
 
