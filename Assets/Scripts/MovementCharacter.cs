@@ -6,7 +6,6 @@ public class MovementCharacter : MonoBehaviour
 {
     [SerializeField] private float _horizontalSpeed;
     [SerializeField] private float _jumpSpeed;
-    [SerializeField] private ContactFilter2D _filter;
     private Animator _animator;
     private Rigidbody2D _rigibody;
 
