@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\CameraChase.cs" />
     <Compile Include="Assets\Scripts\Coin.cs" />
     <Compile Include="Assets\Scripts\ColorChanger.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\MenuButton.cs" />
     <Compile Include="Assets\Scripts\MovementCharacter.cs" />
     <Compile Include="Assets\Scripts\Patrolling.cs" />
