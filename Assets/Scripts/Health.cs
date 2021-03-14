@@ -6,19 +6,15 @@ using DG.Tweening;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private Slider _rectSlider;
-    [SerializeField] private float _health;
-    [SerializeField] private float _hp;
-    
-    public void Healing()
+    [SerializeField] private Slider _slider;
+
+    public float GetHealth()
     {
-        _health = Mathf.Clamp(_health + 0.1f, 0, 1);
-        _rectSlider.DOValue(_health, 0.3f);
+        return _slider.value;
     }
 
-    public void Kick()
+    public void SetHealth(float value)
     {
-        _health = Mathf.Clamp(_health - 0.1f, 0, 1);
-        _rectSlider.DOValue(_health, 0.3f);
+        _slider.value = value;
     }
 }
