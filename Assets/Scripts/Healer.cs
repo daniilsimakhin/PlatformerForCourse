@@ -1,15 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using DG.Tweening;
 using UnityEngine;
-using DG.Tweening;
-using UnityEngine.UI;
 
 public class Healer : MonoBehaviour
 {
-    [SerializeField] private Health _healthController;
+    [SerializeField] Health health;
 
     public void Heal()
     {
-        _healthController.SetHealth(_healthController.GetHealth() + Random.Range(0, 15f));
+        health.health = Mathf.Clamp(health.health + 10, 0, 100);
+        health.UpdateHealth();
     }
 }

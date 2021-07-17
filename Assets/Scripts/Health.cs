@@ -1,20 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private Slider _slider;
+    public Text healthLabel;
+    public Slider healthSlider;
 
-    public float GetHealth()
-    {
-        return _slider.value;
-    }
+    public int health;
 
-    public void SetHealth(float value)
+    public void UpdateHealth()
     {
-        _slider.value = value;
+        healthLabel.text = $"Health: {health.ToString("F0")}";
+        healthSlider.value = health;
     }
 }

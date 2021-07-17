@@ -1,15 +1,13 @@
 ﻿using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Kicker : MonoBehaviour
 {
-    [SerializeField] private Health _healthController;
+    [SerializeField] Health health;
 
     public void Kick()
     {
-        _healthController.SetHealth(_healthController.GetHealth() - Random.Range(0, 15f));
+        health.health = Mathf.Clamp(health.health - 10, 0, 100);
+        health.UpdateHealth();
     }
 }
