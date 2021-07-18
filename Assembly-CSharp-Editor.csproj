@@ -329,6 +329,9 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
+    <Reference Include="Assembly-CSharp-Editor-firstpass">
+      <HintPath>E:/Platformer 2D/New Unity Project/PlatformerForCourse/Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.VR">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
     </Reference>
@@ -731,10 +734,6 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{D07FF0D1-2B09-C0AB-4FFF-3A8321EA6619}</Project>
       <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{83E29E77-8BAE-779D-607D-2D6741C0DA31}</Project>
-      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
