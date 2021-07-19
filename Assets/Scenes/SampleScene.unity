@@ -379,12 +379,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 137977196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88bfacc237cbd4c47b6c294a43842d6b, type: 3}
+  m_Script: {fileID: 11500000, guid: ea6b2aec4f117a545b101ad975e8610c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthLabel: {fileID: 1997620713}
-  healthSlider: {fileID: 1960908023}
-  health: 100
+  _health: 100
 --- !u!1 &311522111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,7 +1770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c33b2e2e92c6f48afd8e1a45cc4fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 137977203}
+  _character: {fileID: 137977203}
 --- !u!1 &1193339221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,7 +2511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ac54375a55dba4293fe8cbf9fa722f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 137977203}
+  _character: {fileID: 137977203}
 --- !u!1 &1578032835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2858,7 +2856,6 @@ GameObject:
   - component: {fileID: 1693166531}
   - component: {fileID: 1693166535}
   - component: {fileID: 1693166536}
-  - component: {fileID: 1693166537}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2975,18 +2972,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvas: {fileID: 1693166535}
---- !u!114 &1693166537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693166530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb75cbec779fb6c46849fb60a76ee08f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1765243289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,6 +3143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1880323379}
+  - component: {fileID: 1880323380}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -3185,6 +3171,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1880323380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880323378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0b187ffa97ef34084ed508774b0155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthSlider: {fileID: 1960908023}
+  _healthDisplay: {fileID: 1997620713}
+  _character: {fileID: 137977203}
 --- !u!1 &1893001672
 GameObject:
   m_ObjectHideFlags: 0

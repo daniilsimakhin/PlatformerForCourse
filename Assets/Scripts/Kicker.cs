@@ -3,11 +3,10 @@ using UnityEngine;
 
 public class Kicker : MonoBehaviour
 {
-    [SerializeField] Health health;
+    [SerializeField] private Character _character;
 
     public void Kick()
     {
-        health.health = Mathf.Clamp(health.health - 10, 0, 100);
-        health.UpdateHealth();
+        _character.ApplyDamage(10);
     }
 }

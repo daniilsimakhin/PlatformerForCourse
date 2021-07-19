@@ -7,7 +7,7 @@ public class CameraChase : MonoBehaviour
     [SerializeField] private Transform _characterTransform;
     [SerializeField] private float _speed;
 
-    void Update()
+    private void Update()
     {
         transform.position = Vector3.Lerp(transform.position, new Vector3(_characterTransform.position.x, _characterTransform.position.y, -20), _speed);
     }

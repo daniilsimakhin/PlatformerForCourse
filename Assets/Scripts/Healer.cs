@@ -3,11 +3,10 @@ using UnityEngine;
 
 public class Healer : MonoBehaviour
 {
-    [SerializeField] Health health;
+    [SerializeField] private Character _character;
 
     public void Heal()
     {
-        health.health = Mathf.Clamp(health.health + 10, 0, 100);
-        health.UpdateHealth();
+        _character.ApplyHeal(10);
     }
 }

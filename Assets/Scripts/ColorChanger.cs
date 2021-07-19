@@ -9,7 +9,7 @@ public class ColorChanger : MonoBehaviour
 
     private Color _startColor;
 
-    public void Start()
+    private void Start()
     {
         _startColor = _background.color;
     }
